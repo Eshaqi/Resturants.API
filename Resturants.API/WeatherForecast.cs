@@ -1,4 +1,4 @@
-namespace Resturants.API;
+namespace Restaurants.API;
 
 public class WeatherForecast
 {
