@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
-using Restaurants.Application.Restaurants.Dtos;
+using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
 
-namespace Restaurants.Application.Validators;
+namespace Restaurants.Application.Restaurants.Commands.Validators;
 
-public class CreateRestaurantDtoValidator : AbstractValidator<CreateRestaurantDto>
+public class CreateRestaurantCommandValidator : AbstractValidator<CreateRestaurantCommand>
 {
     //private readonly List<string> validCategories = ["Italian", "Mexican", "Japanese", "Indian"];
-    public CreateRestaurantDtoValidator()
+    public CreateRestaurantCommandValidator()
     {
-        RuleFor(dto => dto.Name).NotEmpty().Length(3,100);
+        RuleFor(dto => dto.Name).NotEmpty().Length(3, 100);
         RuleFor(dto => dto.Description).NotEmpty().WithMessage("Description is required");
         RuleFor(dto => dto.Category).NotEmpty().WithMessage("Category is required");
         RuleFor(dto => dto.ContactEmail).EmailAddress().WithMessage("Please provide a valid email address");
