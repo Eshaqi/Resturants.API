@@ -18,7 +18,7 @@ public class CreateRestaurantCommandValidator : AbstractValidator<CreateRestaura
         //RuleFor(dto => dto.Category).Custom((value, context) =>
         //{
         //    var isValidCategory = validCategories.Contains(value);
-        //    if(!isValidCategory)
+        //    if (!isValidCategory)
         //    {
         //        context.AddFailure("Category", "Invalid category, Please choose from valid categories");
         //    }
